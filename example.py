@@ -10,3 +10,12 @@ if __name__ == '__main__':
     })
 
     uploadedFileUrl = api.upload('test.txt', 'test.txt')
+
+    doApi = Uploader(Uploader.STORAGE_DIGITALOCEAN, {
+        'access_key': 'spaces_access_key',
+        'secret_key': 'spaces_secret_key',
+        'bucket': 'tmp',
+        'region': 'fra1'
+    })
+
+    uploadedFileUrl = doApi.upload('test.txt', 'test.txt')
